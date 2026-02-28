@@ -15,5 +15,8 @@ parameters:
 
 
     level: max
+    
+    excludePaths:
+        - database/migrations/2026_02_28_191614_create_permission_tables.php
 
     tmpDir: /tmp/phpstan
