@@ -13,6 +13,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Override;
+use Spatie\Permission\Traits\HasRoles;
 
 /**
  * @property-read string $id
@@ -32,6 +33,8 @@ final class User extends Authenticatable implements MustVerifyEmail
     /** @use HasFactory<UserFactory> */
     use HasFactory;
 
+    use HasRoles;
+    use HasUuids;
     use HasUuids;
     use Notifiable;
     use TwoFactorAuthenticatable;
