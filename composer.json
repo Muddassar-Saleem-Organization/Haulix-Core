@@ -1,13 +1,15 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "nunomaduro/laravel-starter-kit-inertia-react",
+    "name": "haulix/core",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "Haulix Core — the core application for Haulix.",
     "keywords": [
+        "haulix",
         "laravel",
-        "framework"
+        "inertia",
+        "react"
     ],
-    "license": "MIT",
+    "license": "proprietary",
     "require": {
         "php": "^8.5.0",
         "inertiajs/inertia-laravel": "^2.0.21",
