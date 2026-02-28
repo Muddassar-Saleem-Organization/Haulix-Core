@@ -1,0 +1,22 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: oxlint
+      glob: '*.{js,jsx,ts,tsx}'
+      run: bunx oxlint --fix --type-aware {staged_files}
+      stage_fixed: true
+
+    - name: oxfmt
+      glob: '*.{js,jsx,ts,tsx,css,json,yml,yaml,md}'
+      run: bunx oxfmt {staged_files}
+      stage_fixed: true
+
+    - name: rector
+      glob: '*.php'
+      run: php vendor/bin/rector process {staged_files}
+      stage_fixed: true
+
+    - name: pint
+      glob: '*.php'
+      run: php vendor/bin/pint --parallel {staged_files}
+      stage_fixed: true

@@ -4,6 +4,9 @@
         "typescript",
         "unicorn",
         "oxc",
-        "react"
+        "react",
+        "react-perf",
+        "import",
+        "promise"
     ]
 }
