@@ -79,16 +79,17 @@
             "bunx npm-check-updates -u"
         ],
         "lint": [
-            "bun run test:types",
+            "@test:types",
             "bun run lint",
             "rector",
             "pint --parallel"
         ],
         "test:type-coverage": "pest --type-coverage --min=100",
         "test:lint": [
-            "pint --parallel --test",
+            "@test:types",
+            "bun run test:lint",
             "rector --dry-run",
-            "bun run test:lint"
+            "pint --parallel --test"
         ],
         "test:unit": "XDEBUG_MODE=\"coverage\" pest --parallel --coverage --exactly=100.0",
         "test:types": [
